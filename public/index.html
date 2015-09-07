@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Zenclock</title>
+    <link href="./bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="./css/zenclock.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="clock-container">
+      <canvas id="clock1" width="250" height="250"></canvas>
+    </div>
+    <div class="clock-container">
+      <canvas id="clock2" width="250" height="250"></canvas>
+    </div>
+    <div class="clock-container">
+      <canvas id="clock3" width="200" height="250"></canvas>
+    </div>
+
+    <br/> <br/>
+
+    <div class="clock-container">
+      <canvas id="clock4" width="250" height="250"></canvas>
+    </div>
+    <div class="clock-container">
+      <canvas id="clock5" width="250" height="250"></canvas>
+    </div>
+    <div class="clock-container">
+      <canvas id="clock6" width="200" height="200"></canvas>
+    </div>
+
+    <br/> <br/>
+
+    <div class="clock-container">
+      <canvas id="clock7" width="250" height="250"></canvas>
+    </div>
+
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
+  	<script src="./js/zenclock.js"></script>
+  	<script type="text/javascript">
+
+      $(function() {
+
+        var clockOptions1 = {
+          secondColor: 'red',
+          minuteColor: '#666',
+          hourColor: '#000',
+          dotColor: '#f00',
+
+          borderColor: '#000',
+          borderStyle: 'double',
+          borderWidth: '4px',
+          borderRadius: '500px',
+
+          highlightTickColor: '#f00',
+
+          font: '14px Helvetica',
+
+          smoothSeconds: true
+        };
+
+        $('#clock1').zenclock(clockOptions1);
+
+        var clockOptions2 = {
+          secondColor: '#444',
+          minuteColor: '#666',
+          hourColor: '#000',
+          dotColor: '#f00',
+
+          borderColor: 'darkgray',
+          borderStyle: 'ridge',
+          borderWidth: '5px',
+
+          background: 'radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%)',
+
+          font: '14px Monaco'
+        };
+
+        $('#clock2').zenclock(clockOptions2);
+
+        var clockOptions3 = {
+          secondColor: '#fff',
+          minuteColor: '#666',
+          hourColor: '#000',
+          dotColor: '#f00',
+
+          borderColor: 'darkgray',
+          borderStyle: 'ridge',
+          borderWidth: '5px',
+          borderRadius: '60px',
+
+          showTicks: false,
+
+          background: 'linear-gradient(to bottom, rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%);',
+
+          font: '14px Monaco'
+        };
+
+        $('#clock3').zenclock(clockOptions3);
+
+        var clockOptions4 = {
+          secondColor: 'lightblue',
+          minuteColor: '#666',
+          hourColor: '#000',
+          dotColor: '#f00',
+
+          borderColor: 'orange',
+          borderStyle: 'solid',
+          borderWidth: '3px',
+          borderRadius: '0px',
+
+          font: '14px Arial',
+
+          smoothSeconds: true
+        };
+
+        $('#clock4').zenclock(clockOptions4);
+
+        var clockOptions5 = {
+          secondColor: '#fff',
+          minuteColor: '#666',
+          hourColor: '#000',
+          dotColor: '#f00',
+
+          borderColor: 'darkgray',
+          borderStyle: 'dotted',
+          borderWidth: '3px',
+          borderRadius: '60px',
+
+          showTicks: false,
+
+          background: 'linear-gradient(175deg, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%)',
+
+          font: '16px Copperplate',
+
+          smoothHours: false
+        };
+
+        $('#clock5').zenclock(clockOptions5);
+
+        var clockOptions6 = {
+          secondColor: '#ddd',
+          minuteColor: '#666',
+          hourColor: '#000',
+
+          borderColor: 'rgba(243,226,199,1)',
+          borderStyle: 'ridge',
+          borderWidth: '5px',
+          borderRadius: '60px',
+
+          showTicks: false,
+
+          background: 'linear-gradient(to bottom, rgba(243,226,199,1) 0%,rgba(193,158,103,1) 50%,rgba(182,141,76,1) 51%,rgba(233,212,179,1) 100%)',
+
+          font: '18px Apple Chancery'
+        };
+
+        $('#clock6').zenclock(clockOptions6);
+
+        var clockOptions7 = {
+          secondColor: 'blue',
+          minuteColor: 'red',
+          hourColor: 'red',
+
+          background: 'url("http://www.famouslogos.org/wp-content/uploads/2009/08/spiderman.gif")'
+        };
+
+        $('#clock7').zenclock(clockOptions7);
+
+      });
+
+  	</script>
+  </body>
+</html>

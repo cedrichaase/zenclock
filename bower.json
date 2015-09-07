@@ -1,0 +1,29 @@
+{
+  "name": "zenclock",
+  "version": "0.0.0",
+  "authors": [
+    "Cedric Haase <cedric@sineband.de>"
+  ],
+  "description": "A highly configurable HTML5 Canvas Analog Clock",
+  "main": "src/zenclock.js",
+  "keywords": [
+    "clock",
+    "analog",
+    "clock",
+    "html5",
+    "canvas",
+    "configurable",
+    "javascript",
+    "jquery",
+    "jquery-plugin"
+  ],
+  "license": "GPL",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ]
+}
