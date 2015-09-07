@@ -13,25 +13,19 @@
       <canvas id="clock2" width="250" height="250"></canvas>
     </div>
     <div class="clock-container">
-      <canvas id="clock3" width="200" height="250"></canvas>
+      <canvas id="clock3" width="250" height="250"></canvas>
     </div>
 
     <br/> <br/>
 
     <div class="clock-container">
-      <canvas id="clock4" width="250" height="250"></canvas>
+      <canvas id="clock4" width="200" height="250"></canvas>
     </div>
     <div class="clock-container">
-      <canvas id="clock5" width="250" height="250"></canvas>
+      <canvas id="clock5" width="200" height="200"></canvas>
     </div>
     <div class="clock-container">
-      <canvas id="clock6" width="200" height="200"></canvas>
-    </div>
-
-    <br/> <br/>
-
-    <div class="clock-container">
-      <canvas id="clock7" width="250" height="250"></canvas>
+      <canvas id="clock6" width="250" height="250"></canvas>
     </div>
 
     <script src="./bower_components/jquery/dist/jquery.js"></script>
@@ -40,7 +34,9 @@
 
       $(function() {
 
-        var clockOptions1 = {
+        $('#clock1').zenclock();
+
+        var clockOptions2 = {
           secondColor: 'red',
           minuteColor: '#666',
           hourColor: '#000',
@@ -58,9 +54,9 @@
           smoothSeconds: true
         };
 
-        $('#clock1').zenclock(clockOptions1);
+        $('#clock2').zenclock(clockOptions2);
 
-        var clockOptions2 = {
+        var clockOptions3 = {
           secondColor: '#444',
           minuteColor: '#666',
           hourColor: '#000',
@@ -75,9 +71,9 @@
           font: '14px Monaco'
         };
 
-        $('#clock2').zenclock(clockOptions2);
+        $('#clock3').zenclock(clockOptions3);
 
-        var clockOptions3 = {
+        var clockOptions4 = {
           secondColor: '#fff',
           minuteColor: '#666',
           hourColor: '#000',
@@ -95,9 +91,9 @@
           font: '14px Monaco'
         };
 
-        $('#clock3').zenclock(clockOptions3);
+        $('#clock4').zenclock(clockOptions4);
 
-        var clockOptions4 = {
+        var clockOptions5 = {
           secondColor: 'lightblue',
           minuteColor: '#666',
           hourColor: '#000',
@@ -111,28 +107,6 @@
           font: '14px Arial',
 
           smoothSeconds: true
-        };
-
-        $('#clock4').zenclock(clockOptions4);
-
-        var clockOptions5 = {
-          secondColor: '#fff',
-          minuteColor: '#666',
-          hourColor: '#000',
-          dotColor: '#f00',
-
-          borderColor: 'darkgray',
-          borderStyle: 'dotted',
-          borderWidth: '3px',
-          borderRadius: '60px',
-
-          showTicks: false,
-
-          background: 'linear-gradient(175deg, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%)',
-
-          font: '16px Copperplate',
-
-          smoothHours: false
         };
 
         $('#clock5').zenclock(clockOptions5);
@@ -155,16 +129,6 @@
         };
 
         $('#clock6').zenclock(clockOptions6);
-
-        var clockOptions7 = {
-          secondColor: 'blue',
-          minuteColor: 'red',
-          hourColor: 'red',
-
-          background: 'url("http://www.famouslogos.org/wp-content/uploads/2009/08/spiderman.gif")'
-        };
-
-        $('#clock7').zenclock(clockOptions7);
 
       });
 
