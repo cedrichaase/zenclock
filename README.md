@@ -6,6 +6,8 @@ A simple, yet highly configurable analog clock widget that uses an HTML5 Canvas.
 
 ![Zenclock examples](https://raw.github.com/cedrichaase/zenclock/master/screenshot/zenclock.png)
 
+See the widget in action [here](http://cedrichaase.github.io/zenclock/).
+
 ## Dependencies
 
 - [jQuery v2.1.3 (>= 1.9.0)](http://jquery.com/)
