@@ -125,9 +125,9 @@
         if(this.options.showTicks) {
             for (var i = 0; i < 60; i++) {
                 if(i % 5 === 0) {
-                  this.radialLineAtAngle(this.tickAngle(i), true);
+                  this.radialLineAtAngle(i/60.0, true);
                 } else {
-                  this.radialLineAtAngle(this.tickAngle(i), false);
+                  this.radialLineAtAngle(i/60.0, false);
                 }
             }
         }
@@ -212,22 +212,6 @@
             this.ctx.restore();
         this.ctx.restore();
 
-    };
-
-    Clock.prototype.tickAngle = function(second) {
-        // Log algorithm by David Bradshaw
-        var tweak = 3; // If it's lower the one second mark looks wrong (?)
-        if (this.logClock) {
-            return second === 0 ? 0 : (Math.log(second*tweak) / Math.log(60*tweak));
-        }
-        else if (this.logClockRev) {
-            // Flip the seconds then flip the angle (trickiness)
-            second = (60 - second) % 60;
-            return 1.0 - (second === 0 ? 0 : (Math.log(second*tweak) / Math.log(60*tweak)));
-        }
-        else {
-            return second/60.0;
-        }
     };
 
     Clock.prototype.radialLineAtAngle = function(angleFraction, highlight) {
