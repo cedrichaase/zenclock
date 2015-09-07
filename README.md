@@ -86,3 +86,19 @@ Following options are available:
 | smoothMinutes      | Boolean | true          |Wether or not to take seconds into account when drawing the minute indicator.|
 | smoothHours        | Boolean | true          |Wether or not to take minutes into account when drawing the hour indicator.|
 
+## Methods
+
+The clock widget can be interacted with using the following methods, like so:
+
+```javascript
+$('#clock2').zenclock('stop');
+```
+
+### List of methods
+
+Following methods are available:
+
+| method | arguments | description                                                                    |
+|--------|-----------|--------------------------------------------------------------------------------|
+| start  | -         | Starts the update interval that fetches the current time and renders the clock |
+| stop   | -         | Stops the update interval                                                      |
