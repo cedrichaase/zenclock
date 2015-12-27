@@ -1,22 +1,134 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Conway</title>
-    <link href="./css/conway.css" rel="stylesheet">
+    <title>Zenclock</title>
+    <link href="./css/zenclock.css" rel="stylesheet">
   </head>
   <body>
-    <div class="canvas-container">
-      <canvas id="canvas1" width="640" height="480"></canvas>
-      <br/>
-      <button onclick="$('#canvas1').conway('toggleExecution')">Go</button>
+    <div class="clock-container">
+      <canvas id="clock1" width="250" height="250"></canvas>
+    </div>
+    <div class="clock-container">
+      <canvas id="clock2" width="250" height="250"></canvas>
+    </div>
+    <div class="clock-container">
+      <canvas id="clock3" width="250" height="250"></canvas>
+    </div>
+
+    <br/> <br/>
+
+    <div class="clock-container">
+      <canvas id="clock4" width="200" height="250"></canvas>
+    </div>
+    <div class="clock-container">
+      <canvas id="clock5" width="200" height="200"></canvas>
+    </div>
+    <div class="clock-container">
+      <canvas id="clock6" width="250" height="250"></canvas>
     </div>
 
     <script src="./bower_components/jquery/dist/jquery.js"></script>
-  	<script src="./js/conway.js"></script>
+  	<script src="./js/zenclock.js"></script>
   	<script type="text/javascript">
 
       $(function() {
-        $('#canvas1').conway();
+
+        $('#clock1').zenclock();
+
+        var clockOptions2 = {
+          secondColor: 'red',
+          minuteColor: '#666',
+          hourColor: '#000',
+          dotColor: '#f00',
+
+          borderColor: '#000',
+          borderStyle: 'double',
+          borderWidth: '4px',
+          borderRadius: '500px',
+
+          highlightTickColor: '#f00',
+
+          font: '14px Helvetica',
+
+          smoothSeconds: true
+        };
+
+        $('#clock2').zenclock(clockOptions2);
+
+        var clockOptions3 = {
+          secondColor: '#444',
+          minuteColor: '#666',
+          hourColor: '#000',
+          dotColor: '#f00',
+
+          borderColor: 'darkgray',
+          borderStyle: 'ridge',
+          borderWidth: '5px',
+
+          background: 'radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%)',
+
+          font: '14px Monaco'
+        };
+
+        $('#clock3').zenclock(clockOptions3);
+
+        var clockOptions4 = {
+          secondColor: '#fff',
+          minuteColor: '#666',
+          hourColor: '#000',
+          dotColor: '#f00',
+
+          borderColor: 'darkgray',
+          borderStyle: 'ridge',
+          borderWidth: '5px',
+          borderRadius: '60px',
+
+          showTicks: false,
+
+          background: 'linear-gradient(to bottom, rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%);',
+
+          font: '14px Monaco'
+        };
+
+        $('#clock4').zenclock(clockOptions4);
+
+        var clockOptions5 = {
+          secondColor: 'lightblue',
+          minuteColor: '#666',
+          hourColor: '#000',
+          dotColor: '#f00',
+
+          borderColor: 'orange',
+          borderStyle: 'solid',
+          borderWidth: '3px',
+          borderRadius: '0px',
+
+          font: '14px Arial',
+
+          smoothSeconds: true
+        };
+
+        $('#clock5').zenclock(clockOptions5);
+
+        var clockOptions6 = {
+          secondColor: '#ddd',
+          minuteColor: '#666',
+          hourColor: '#000',
+
+          borderColor: 'rgba(243,226,199,1)',
+          borderStyle: 'ridge',
+          borderWidth: '5px',
+          borderRadius: '60px',
+
+          showTicks: false,
+
+          background: 'linear-gradient(to bottom, rgba(243,226,199,1) 0%,rgba(193,158,103,1) 50%,rgba(182,141,76,1) 51%,rgba(233,212,179,1) 100%)',
+
+          font: '18px Apple Chancery'
+        };
+
+        $('#clock6').zenclock(clockOptions6);
+
       });
 
   	</script>
