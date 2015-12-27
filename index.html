@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Conway</title>
+    <link href="./css/conway.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="canvas-container">
+      <canvas id="canvas1" width="640" height="480"></canvas>
+      <br/>
+      <button onclick="$('#canvas1').conway('toggleExecution')">Go</button>
+    </div>
+
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
+  	<script src="./js/conway.js"></script>
+  	<script type="text/javascript">
+
+      $(function() {
+        $('#canvas1').conway();
+      });
+
+  	</script>
+  </body>
+</html>
